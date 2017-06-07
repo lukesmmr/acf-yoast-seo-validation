@@ -51,7 +51,10 @@
                 * custom edit for Arjuna Capital ACF Section Builder
                 * set certan custom section builder fields to `null` to avoid mixing up number/styling instructions with SEO eval
                 */
-                if (name === 'section_name' || name === 'row_class' || name === 'row_anchor' || name === 'row_padding' || name === 'row_padding' || name === 'slide_image_position' || name === 'team_post_link_text' || name === 'team_location' || name === 'team_qualification') {
+                if (name === 'section_name' || name === 'row_class' || name ===
+                  'row_anchor' || name === 'row_padding' || name === 'row_padding' ||
+                  name === 'slide_image_position' || name === 'team_post_link_text' ||
+                  name === 'team_location' || name === 'team_qualification') {
                   value = null;
                 }
                 break;

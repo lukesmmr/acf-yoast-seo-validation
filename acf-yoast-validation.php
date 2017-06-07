@@ -13,14 +13,10 @@ Copyright: DACHCOM.DIGITAL, Stefan Hagspiel
 Class AcfYoastSeoValidator {
 
     public function __construct() {
-
         add_action( 'admin_enqueue_scripts',  array($this, 'bind_js'));
-
-
     }
 
     public static function bind_js() {
-
         if (defined('WPSEO_VERSION')) {
             wp_enqueue_script('acf_yoast_seo_validator', plugin_dir_url( __FILE__ ) . 'assets/js/acf_yoast.js', false, false, true);
         }

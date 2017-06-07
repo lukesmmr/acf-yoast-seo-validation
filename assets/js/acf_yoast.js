@@ -34,6 +34,7 @@
 
         var key = $el.attr('data-key'),
             type = $el.attr('data-type'),
+            name = $el.attr('data-name'),
             value = null;
 
         var $parents = $el.parents('[data-name][data-type][data-key],[data-id]');
@@ -44,6 +45,14 @@
                 if ($el.is("[class*='wrap-in-']")) {
                     var wrapMatch = $el.attr('class').match(/wrap-in-(\w+)/);
                     value = '<' + wrapMatch[1] + '>' + value + "</" + wrapMatch[1] + ">";
+                }
+                /**
+                * @lukesmmr | June 2017
+                * custom edit for Arjuna Capital ACF Section Builder
+                * set certan custom section builder fields to `null` to avoid mixing up number/styling instructions with SEO eval
+                */
+                if (name === 'section_name' || name === 'row_class' || name === 'row_anchor' || name === 'row_padding' || name === 'row_padding' || name === 'slide_image_position' || name === 'team_post_link_text' || name === 'team_location' || name === 'team_qualification') {
+                  value = null;
                 }
                 break;
             case 'image' :
@@ -58,6 +67,10 @@
             case 'textarea' :
             case 'wysiwyg' :
                 value = $el.find('textarea').val();
+                // check if value is empty, then set to null/ignore
+                if (value === '') {
+                  value = null;
+                }
                 break;
             default :
                 value = null;

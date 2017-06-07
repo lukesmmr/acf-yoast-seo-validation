@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Dachcom ACF - YOAST SEO Validation
-Plugin URI: https://github.com/dachcom-digital/acf-yoast-seo-validation.git
+Plugin Name: Arjuna Capital ACF YOAST (fork from Dachcom ACF - YOAST SEO Validation)
+Plugin URI: https://github.com/lukesmmr/acf-yoast-seo-validation.git
 Description: Add a YOAST SEO (3+) Validation to ACF.
 Version: 5.3.2.2
 Author: Stefan Hagspiel
